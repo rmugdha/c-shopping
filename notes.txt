@@ -1,0 +1,35 @@
+sass-twitter-bootstrap  - It's not a gem, but a set of sass templates for twitter-bootstrap
+compass-twitter-bootstrap - This is a gem for rails
+bootstrap-sass - This is a gem for rails
+
+which is the right gem to use ?
+
+It doesn't make sense, import twitter bootstrap from base.scss doesn't work throws following error. 
+
+
+	Sass::SyntaxError in Homes#index
+
+	Showing /home/vangapal/core-src/c-shopping/app/views/layouts/application.html.slim where line #7 raised:
+
+	Invalid CSS after "@import ": expected file to import (string or url()), was "compass"
+	  (in /home/vangapal/core-src/c-shopping/app/assets/stylesheets/base.scss)
+
+	Extracted source (around line #7):
+
+	4:     title Compass Twitter Bootstrap Demo
+	5:     meta name="keywords" content="template language"
+	6: 
+	7:     = stylesheet_link_tag "application"
+	8:     = javascript_include_tag "application"
+	9:     = csrf_meta_tag
+	10:     javascript:
+
+	Rails.root: /home/vangapal/core-src/c-shopping
+	Application Trace | Framework Trace | Full Trace
+
+	app/assets/stylesheets/base.scss:1
+	app/views/layouts/application.html.slim:7:in `_app_views_layouts_application_html_slim__626856959_82039750'
+	app/controllers/homes_controller.rb:7:in `index'
+
+
+But import same twitter bootstrap from base.sass , it works without any issues. 
