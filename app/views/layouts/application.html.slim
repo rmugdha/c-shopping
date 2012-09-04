@@ -1,9 +1,18 @@
 doctype 5
 html
+  /[if lt IE 7]
+    html.no-js.ie6.oldie lang="en"
+  /[if IE 7]
+    html.no-js.ie7.oldie lang="en"
+  /[if IE 8]
+    html.no-js.ie8.oldie lang="en"
+  /[if gte IE 8]
+    html.no-js lang="en"
   head
-    title Compass Twitter Bootstrap Demo
+    title Rails Application
+    meta charset="utf-8"
     meta name="keywords" content="template language"
-
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
     = csrf_meta_tag
