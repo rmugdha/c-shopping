@@ -15,9 +15,9 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'compass-rails', '>= 1.0.0.rc.1'
   gem 'compass_twitter_bootstrap', '2.0.3'
-
+  gem "respond-rails", "~> 1.0"
   # gem 'bootstrap-sass'
-  #gem  'sass-twitter-bootstrap', :git => 'git://github.com/jlong/sass-twitter-bootstrap.git'
+  # gem  'sass-twitter-bootstrap', :git => 'git://github.com/jlong/sass-twitter-bootstrap.git'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
