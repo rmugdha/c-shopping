@@ -14,7 +14,8 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'compass-rails', '>= 1.0.0.rc.1'
-  gem 'compass_twitter_bootstrap', '2.0.3'
+  gem 'bootstrap-sass'
+  gem 'font-awesome-sass-rails'
   gem "respond-rails", "~> 1.0"
   # gem 'bootstrap-sass'
   # gem  'sass-twitter-bootstrap', :git => 'git://github.com/jlong/sass-twitter-bootstrap.git'
