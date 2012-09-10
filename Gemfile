@@ -13,6 +13,8 @@ gem 'jquery-rails'
 gem 'sprockets'
 gem 'sprockets_spacely', :git => 'git://github.com/outright/sprockets_spacely.git'
 
+gem 'rails-backbone'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
