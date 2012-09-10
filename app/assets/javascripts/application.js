@@ -13,5 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-modal
+//= require underscore
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/c_shopping
 //= require_tree .
 //= require inspect
