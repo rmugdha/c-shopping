@@ -8,7 +8,7 @@ class CShopping.Routers.PostsRouter extends Backbone.Router
     "index"    : "index"
     ":id/edit" : "edit"
     ":id"      : "show"
-    ".*"        : "index"
+    ".*"       : "index"
 
   newPost: ->
     @view = new CShopping.Views.Posts.NewView(collection: @posts)

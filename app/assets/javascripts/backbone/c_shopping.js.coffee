@@ -3,9 +3,7 @@
 #= require_tree ./models
 #= require_tree ./views
 #= require_tree ./routers
-
-window.CShopping =
-  Models: {}
-  Collections: {}
-  Routers: {}
-  Views: {}
+window.CShopping.Models= {}
+window.CShopping.Collections= {}
+window.CShopping.Routers= {}
+window.CShopping.Views= {}

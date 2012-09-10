@@ -1,7 +1,7 @@
 CShopping.Views.Posts ||= {}
 
 class CShopping.Views.Posts.EditView extends Backbone.View
-  template : JST["backbone/templates/posts/edit"]
+  template : CShopping.Templates.mustache['backbone/templates/posts/edit']
 
   events :
     "submit #edit-post" : "update"
@@ -17,7 +17,7 @@ class CShopping.Views.Posts.EditView extends Backbone.View
     )
 
   render : ->
-    $(@el).html(@template(@model.toJSON() ))
+    $(@el).html(@template.render(@model.toJSON() ))
 
     this.$("form").backboneLink(@model)
 

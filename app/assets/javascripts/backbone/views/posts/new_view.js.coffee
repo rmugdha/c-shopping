@@ -1,7 +1,7 @@
 CShopping.Views.Posts ||= {}
 
 class CShopping.Views.Posts.NewView extends Backbone.View
-  template: JST["backbone/templates/posts/new"]
+  template: CShopping.Templates.mustache['backbone/templates/posts/new']
 
   events:
     "submit #new-post": "save"
@@ -30,7 +30,7 @@ class CShopping.Views.Posts.NewView extends Backbone.View
     )
 
   render: ->
-    $(@el).html(@template(@model.toJSON() ))
+    $(@el).html(@template.render(@model.toJSON() ))
 
     this.$("form").backboneLink(@model)
 

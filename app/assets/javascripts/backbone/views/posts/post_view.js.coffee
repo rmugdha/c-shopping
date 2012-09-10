@@ -1,7 +1,7 @@
 CShopping.Views.Posts ||= {}
 
 class CShopping.Views.Posts.PostView extends Backbone.View
-  template: JST["backbone/templates/posts/post"]
+  template: CShopping.Templates.mustache["backbone/templates/posts/post"]
 
   events:
     "click .destroy" : "destroy"
@@ -15,5 +15,5 @@ class CShopping.Views.Posts.PostView extends Backbone.View
     return false
 
   render: ->
-    $(@el).html(@template(@model.toJSON() ))
+    $(@el).html(@template.render(@model.toJSON() ))
     return this

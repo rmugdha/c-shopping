@@ -18,5 +18,6 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/c_shopping
+//= require mustache
 //= require_tree .
 //= require inspect

@@ -1,7 +1,7 @@
 CShopping.Views.Posts ||= {}
 
 class CShopping.Views.Posts.IndexView extends Backbone.View
-  template: JST["backbone/templates/posts/index"]
+  template: CShopping.Templates.mustache['backbone/templates/posts/index']
 
   initialize: () ->
     @options.posts.bind('reset', @addAll)
@@ -14,7 +14,7 @@ class CShopping.Views.Posts.IndexView extends Backbone.View
     @$("tbody").append(view.render().el)
 
   render: =>
-    $(@el).html(@template(posts: @options.posts.toJSON() ))
+    $(@el).html(@template.render(posts: @options.posts.toJSON() ))
     @addAll()
 
     return this
