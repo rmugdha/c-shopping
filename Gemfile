@@ -7,9 +7,12 @@ gem 'rails', '3.2.8'
 
 gem 'sqlite3'
 gem 'slim-rails',  '~> 1.0.2'
-
 # Gems used only for assets and not required
 # in production environments by default.
+gem 'jquery-rails'
+gem 'sprockets'
+gem 'sprockets_spacely', :git => 'git://github.com/outright/sprockets_spacely.git'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -17,6 +20,8 @@ group :assets do
   gem 'bootstrap-sass'
   gem 'font-awesome-sass-rails'
   gem "respond-rails", "~> 1.0"
+  
+
   # gem 'bootstrap-sass'
   # gem  'sass-twitter-bootstrap', :git => 'git://github.com/jlong/sass-twitter-bootstrap.git'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -24,8 +29,10 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
+group :development do
+ gem 'inspect-mustache' , :path => 'custom-gems/inspect-mustache'
+ gem 'pry-rails'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

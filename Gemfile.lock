@@ -1,3 +1,17 @@
+GIT
+  remote: git://github.com/outright/sprockets_spacely.git
+  revision: bd7ff8c5458bfcd39f1723db922f27ffc553e24f
+  specs:
+    sprockets_spacely (0.0.2)
+      rails
+      tilt
+
+PATH
+  remote: custom-gems/inspect-mustache
+  specs:
+    inspect-mustache (0.0.1)
+      railties (~> 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -32,6 +46,7 @@ GEM
     bootstrap-sass (2.1.0.0)
     builder (3.0.2)
     chunky_png (1.2.6)
+    coderay (1.0.7)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -63,9 +78,16 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8)
     mime-types (1.19)
     multi_json (1.3.6)
     polyglot (0.3.3)
+    pry (0.9.10)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.3.1)
+    pry-rails (0.2.1)
+      pry (>= 0.9.10)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -106,6 +128,7 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       slim (~> 1.0)
+    slop (3.3.3)
     sprockets (2.1.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -130,10 +153,14 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails (>= 1.0.0.rc.1)
   font-awesome-sass-rails
+  inspect-mustache!
   jquery-rails
+  pry-rails
   rails (= 3.2.8)
   respond-rails (~> 1.0)
   sass-rails (~> 3.2.3)
   slim-rails (~> 1.0.2)
+  sprockets
+  sprockets_spacely!
   sqlite3
   uglifier (>= 1.0.3)
