@@ -20,4 +20,4 @@
 //= require backbone/c_shopping
 //= require mustache
 //= require_tree .
-//= //require inspect
+//= require inspect
