@@ -34,6 +34,7 @@ end
 group :development do
  gem 'inspect-mustache' , :path => 'custom-gems/inspect-mustache'
  gem 'pry-rails'
+ gem 'debugger'
 end
 
 # To use ActiveModel has_secure_password
