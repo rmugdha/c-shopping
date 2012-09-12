@@ -16,7 +16,7 @@ module Sprockets
                  parts.pop
                  parts.push filename
                  relative_path=parts.join "/"
-                "<inspect class='inspect active' data-path='#{scope.logical_path}'>#{data}</inspect>"
+                "<inspect class='inspect' data-path='#{scope.logical_path}'>#{data}</inspect>"
           end
         end
       end

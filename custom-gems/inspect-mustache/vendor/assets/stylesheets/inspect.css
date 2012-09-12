@@ -3,11 +3,11 @@
     border-color: red;
     border-style: solid;
 }
-.inspect.active:hover{
+.inspect:hover {
     background-color: rgba(0, 0, 0, 0.5);
     position: relative;
 }
-.inspect.active:hover .inspect.active:before{
+.inspect:hover:before{
     content: attr(data-path);
     background-color: #fff;
     color: #000;
@@ -18,4 +18,5 @@
     padding: 10px;
     border-radius: 10px;
 }
+
 
