@@ -13,10 +13,13 @@
     color: #000;
     line-height: 1em;
     position: absolute;
-    top: 0;
-    right: 0;
+    min-width:400px;
+    width:95%;
+    top: 0px;
+    right: 0px;
     padding: 10px;
     border-radius: 10px;
+    text-align: center;
 }
 
 
