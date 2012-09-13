@@ -1,11 +1,16 @@
-/**
 $(function(){
-    var p='<div class="pinched-div"><div class="pinched"><p>hello</p></div></div>';
-    $("body").append(p);
-    $('inspect').live('click',function(e){
-        e.stopPropagation();
-        var path=$(this).attr('data-path');
-        console.log("path => "+path);
-    });
+    if(window.location.href.indexOf("__inspect__") != -1){
+        var bar = $('<div class="inspect-top"><a href="javascript:void(0)" class="bar">INSPECT</div></div>');
+        $(document.body).append(bar);
+
+        $('.inspect-top .bar').live('click',function(e){
+
+            e.stopPropagation();
+
+            if($('.inspect').hasClass('active'))
+                $('.inspect').removeClass('active')
+            else
+                $('.inspect').addClass('active')
+        });
+    }
 });
- **/
