@@ -1,27 +1,44 @@
 require "inspect-mustache/version"
 module Sprockets
+  class AssetAttributes
+    def extensions
+      @extensions ||= @pathname.basename.to_s.scan(/\.[^.]+/)
+      Sprockets::Inspect::Template::Namespace.value.each { |ext|
+        @extensions.push(".inspect") if @pathname.to_s[ext] != nil and not @extensions.include? ".inspect"
+      }
+      @extensions
+    end
+  end
+
   module Inspect
     class Engine < Rails::Engine
     end
-    module Mustache
-      module Template
-        class Processor < Tilt::Template
+    module Template
+      class Namespace
+        def self.value=(val)
+          @@value = val
+        end
 
-          def prepare
-          end
+        def self.value
+          @@value  ||= []
+        end
+      end
+      class Processor < Tilt::Template
 
-          def evaluate(scope, locals, &block)
-                 filename=(scope.pathname.to_s.split /\//).last
-                 parts=(scope.logical_path.split /\//)
-                 parts.pop
-                 parts.push filename
-                 relative_path=parts.join "/"
-                "<inspect class='inspect' data-path='#{scope.logical_path}'>#{data}</inspect>"
-          end
+        def prepare
+        end
+
+        def evaluate(scope, locals, &block)
+          filename=(scope.pathname.to_s.split /\//).last
+          parts=(scope.logical_path.split /\//)
+          parts.pop
+          parts.push filename
+          relative_path=parts.join "/"
+          "<inspect class='inspect' data-path='#{scope.logical_path}'>#{data}</inspect>"
         end
       end
 
     end
   end
-  register_engine '.inspect', ::Sprockets::Inspect::Mustache::Template::Processor
+  register_engine '.inspect', ::Sprockets::Inspect::Template::Processor
 end

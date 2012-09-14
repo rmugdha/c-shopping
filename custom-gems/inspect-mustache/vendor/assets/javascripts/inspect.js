@@ -1,9 +1,10 @@
-$(function(){
-    if(window.location.href.indexOf("__inspect__") != -1){
-        var bar = $('<div class="inspect-top"><a href="javascript:void(0)" class="bar">INSPECT</div></div>');
+function InspectTemplates()
+{
+    this.enable = function(){
+        var bar = $('<div class="inspect-top"><a href="javascript:void(0)" class="bar">INSPECT</a></div>');
         $(document.body).append(bar);
 
-        $('.inspect-top .bar').live('click',function(e){
+        $('.inspect-top').live('click',function(e){
 
             e.stopPropagation();
 
@@ -13,4 +14,18 @@ $(function(){
                 $('.inspect').addClass('active')
         });
     }
-});
+    this.disable = function(){
+        $('.inspect-top').hide();
+        $('.inspect').removeClass('active')
+    }
+
+}
+
+var __INSPECT__ = new InspectTemplates();
+
+
+$(function(){
+    if(window.location.href.indexOf("__inspect__") != -1){
+        __INSPECT__.enable()
+    }
+})
