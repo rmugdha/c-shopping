@@ -22,7 +22,7 @@ group :assets do
   gem 'bootstrap-sass'
   gem 'font-awesome-sass-rails'
   gem "respond-rails", "~> 1.0"
-  gem 'inspect-mustache' , :path => 'custom-gems/inspect-mustache'
+  gem 'inspect-templates' , :git => 'git://github.com/rvangapalli/inspect-templates.git'
 
 
   # gem 'bootstrap-sass'

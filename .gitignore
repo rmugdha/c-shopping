@@ -17,3 +17,5 @@
 /.idea
 /.idea/*
 **/*.gitkeep
+/custom-gems
+/custom-gems/*

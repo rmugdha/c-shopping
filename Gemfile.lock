@@ -6,10 +6,11 @@ GIT
       rails
       tilt
 
-PATH
-  remote: custom-gems/inspect-mustache
+GIT
+  remote: git://github.com/rvangapalli/inspect-templates.git
+  revision: ba8317833283ad47311e309be13b2ade15aabb1f
   specs:
-    inspect-mustache (0.0.1)
+    inspect-templates (0.0.1)
       railties (~> 3.1)
 
 GEM
@@ -167,7 +168,7 @@ DEPENDENCIES
   compass-rails (>= 1.0.0.rc.1)
   debugger
   font-awesome-sass-rails
-  inspect-mustache!
+  inspect-templates!
   jquery-rails
   pry-rails
   rails (= 3.2.8)
