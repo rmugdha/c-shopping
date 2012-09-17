@@ -5,7 +5,7 @@ class HomesController < ApplicationController
     @homes = Home.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.slim
       format.json { render json: @homes }
     end
   end

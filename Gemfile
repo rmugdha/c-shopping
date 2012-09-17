@@ -23,7 +23,7 @@ group :assets do
   gem 'font-awesome-sass-rails'
   gem "respond-rails", "~> 1.0"
   gem 'inspect-templates' , :git => 'git://github.com/rvangapalli/inspect-templates.git'
-
+#  gem 'inspect-templates' , :path => 'custom-gems/inspect-templates'
 
   # gem 'bootstrap-sass'
   # gem  'sass-twitter-bootstrap', :git => 'git://github.com/jlong/sass-twitter-bootstrap.git'
@@ -36,6 +36,7 @@ group :development do
 # gem 'inspect-mustache' , :path => 'custom-gems/inspect-mustache'
  gem 'pry-rails'
  gem 'debugger'
+ gem 'awesome_print'
 end
 
 # To use ActiveModel has_secure_password
