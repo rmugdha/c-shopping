@@ -1,1 +1,1 @@
-Sprockets::Inspect::Template::Namespace.value=[".mustache",".jst"]
+Inspect::Template::Namespace.value=[".mustache",".jst"]
